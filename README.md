@@ -1,24 +1,21 @@
-# README
+# AggrEmoji
+  - a simple, web-scraping emoji aggregator tool for upping your workplace chat    
+    emoji game
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+----------
 
-Things you may want to cover:
-
+### Basics
 * Ruby version
+  - 2.6.3
 
-* System dependencies
+* License
+  - CC0 1.0 Universal Creative Commons License
 
-* Configuration
-
-* Database creation
-
-* Database initialization
+* To Run
+  - input `ruby bin/run.rb` from root level directory
+  - follow prompts and (hopefully) aggregate your chosen emoji
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+  - Work in Progress (WIP - still getting basic functionality: stay tuned)
 
 * ...
