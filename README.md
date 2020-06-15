@@ -16,6 +16,7 @@
   - follow prompts and (hopefully) aggregate your chosen emoji
 
 * How to run the test suite
-  - Work in Progress (WIP - still getting basic functionality: stay tuned)
+  - `rake spec` from root directory
+  - `rake spec #{test-name?}` to run targetted tests (? - please confirm)
 
-* ...
+* ... 🤠
