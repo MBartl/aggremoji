@@ -12,11 +12,12 @@ class Interface
     prompt = TTY::Prompt.new
   	puts "\n"
     choices = ['Yeah!', 'Nah.']
-    nav = prompt.select('Wanna see the smiley face?' + "\n", choices)
+    nav = prompt.select("Wanna see the smiley face? \n(It's actually just a smiley banana rn, \nlol sry.)" + "\n", choices)
 
     if nav == 'Yeah!'
       EmojiScraper.main
 
+      BananaMan.dance
       puts 'bye bye, now'
       sleep (0.09)
       exit

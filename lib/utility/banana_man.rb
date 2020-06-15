@@ -2,7 +2,8 @@ class BananaMan
 
   def self.frame_one
     puts "
-                                        `..`
+
+
                                        :s+-
                                      /dy/+yN:
                                    :dh:---oN`
@@ -41,7 +42,8 @@ class BananaMan
   end
 
   def self.frame_two
-    puts "                                 ``
+    puts "
+
                                  `sdyyhhd:
                                  sh:::::sd`
                                 +d/::::::do
@@ -78,13 +80,14 @@ class BananaMan
                      .do-           /m`    oh.          `:hs
                      -ds+///////+oyys.      /yyso+///////+hs
                        .-:::::/:-.`            `.-://///:.`
-    "
+  "
     sleep (0.09)
     system 'clear'
   end
 
   def self.frame_three
-    puts "                                     ``
+    puts "
+                                          /-s/
                                         /hyyyhd/
                                        .m+::::+m:
                                        yh::::::+m-
@@ -130,9 +133,7 @@ class BananaMan
 
 
 
-
-
-                                         .-`
+                                        .-``
                                       -shyyd+`
                                       .m+:::odo`
                                        hy:::::sd/
@@ -170,8 +171,6 @@ class BananaMan
 
   def self.frame_five
     puts "
-
-
 
 
                                         ./o/`
@@ -212,7 +211,9 @@ class BananaMan
   end
 
   def self.frame_six
-    puts "                                      ````..`
+    puts "
+
+                                         ``` ..
                                         hhyyyyd:
                                        sh:::::+m-
                                       .m+::::::sd`
@@ -257,6 +258,7 @@ class BananaMan
   def self.frame_seven
     puts "
 
+                                   ..```
                                  `yhyhhhd.
                                  yh:::::yh`
                                 oh::::::/m/
@@ -298,43 +300,41 @@ class BananaMan
   end
 
   def self.frame_eight
-    puts "
+    puts ".
 
 
 
-
-
-                                     `:.
-                                   .+dyyhy:
-                                 `ods:::+m-
-                                /ds:::::yh
-                              -hh/::::::ho
-                             +mo::::::::d+
-                           `sd/:::::::::m/
-                          `sd/::::::::::m+
-                          sd::::::::+yyhms:/:.
-                         +m/::::::+ds-``.+dh+sh:
-                        `ds:::::::mo     -om:.ym.
-                        /m::::::::ds     /ym::ym-
-                        oh::/o::::/dh/-.:omo-od/
-                        yy:::mdyo/::/ossomho+:`
-                        oy:::smhhddhso//:yh
-                        +d::::smhyyyhhddmys`
-                        .m+::::/hdhyyyyym:
-                   `     sd::::::/oyhdddmy-`
-              `.-o++h/:. `dy::::::::::/+ooym.     `:.oos/
-              y//o  .+so. .ds::::::::::::::do    y+--//+d/
-             `sd`     `hd` .ds:::::::::::::sh``/+s`     :+s`
-              +d-     `dy/  `hh/:::::::::::/m/ oy/      oyo`
-               +do  `.oms    `odo:::::::::::yh`:sdo.`--`-y`
-               -`s+ohyosddo-  :mmd+:::::::::/my: -dmdho+/`
-                 `-`-`  `/ymhomm-omdo::::::::smmdsmh`
-                           .+dd+hms-+dyo::::::dddmh`
-                          `.--omd-    -ohhyoshhodmd+-.``
-                      -oyyso++++oyhs/     .-+yhyso+++osyho-
-                     /m/`          -yy     oh:`          :do
-                     :dyo+++++++++osho     +dso+++++++++osd+
-                       `.----------.         `-----------`
+                                    `:.
+                                  .+dyyhy:
+                                `ods:::+m-
+                               /ds:::::yh
+                             -hh/::::::ho
+                            +mo::::::::d+
+                          `sd/:::::::::m/
+                         `sd/::::::::::m+
+                         sd::::::::+yyhms:/:.
+                        +m/::::::+ds-``.+dh+sh:
+                       `ds:::::::mo     -om:.ym.
+                       /m::::::::ds     /ym::ym-
+                       oh::/o::::/dh/-.:omo-od/
+                       yy:::mdyo/::/ossomho+:`
+                       oy:::smhhddhso//:yh
+                       +d::::smhyyyhhddmys`
+                       .m+::::/hdhyyyyym:
+                  `     sd::::::/oyhdddmy-`
+             `.-o++h/:. `dy::::::::::/+ooym.     `:.oos/
+             y//o  .+so. .ds::::::::::::::do    y+--//+d/
+            `sd`     `hd` .ds:::::::::::::sh``/+s`     :+s`
+             +d-     `dy/  `hh/:::::::::::/m/ oy/      oyo`
+              +do  `.oms    `odo:::::::::::yh`:sdo.`--`-y`
+              -`s+ohyosddo-  :mmd+:::::::::/my: -dmdho+/`
+                `-`-`  `/ymhomm-omdo::::::::smmdsmh`
+                          .+dd+hms-+dyo::::::dddmh`
+                         `.--omd-    -ohhyoshhodmd+-.``
+                     -oyyso++++oyhs/     .-+yhyso+++osyho-
+                    /m/`          -yy     oh:`          :do
+                    :dyo+++++++++osho     +dso+++++++++osd+
+                     `.----------.         `-----------`
   "
     sleep (0.09)
     system 'clear'
@@ -342,14 +342,13 @@ class BananaMan
 
   def self.animation
     5.times do
-      BananaMan.frame_one
-      BananaMan.frame_two
-      BananaMan.frame_three
-      BananaMan.frame_four
-      BananaMan.frame_five
-      BananaMan.frame_six
-      BananaMan.frame_seven
-      BananaMan.frame_eight
+      frame_one
+      frame_two
+      frame_three
+      frame_four
+      frame_six
+      frame_seven
+      frame_eight
     end
   end
 
@@ -357,14 +356,14 @@ class BananaMan
     prompt = TTY::Prompt.new
     nav = prompt.select('What do you want to do next?', %w(More Back))
     if nav == "More"
-
-      print "Seriously?"
-      sleep (1.2)
-      print " Alright, Banana Man, hit it!"
-      sleep (2)
-      BananaMan.animation
+      print "Really?"
+      sleep (0.4)
+      print " Okay!"
+      sleep (0.5)
+      print " Banana Man, do your thing!"
+      sleep (0.55)
+      dance
     else
-      system 'clear'
       Interface.welcome
     end
   end
