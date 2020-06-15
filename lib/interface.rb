@@ -5,19 +5,17 @@ class Interface
     puts 'Yo waddup'
     sleep (0.5)
 
-    self.letsDoThis
+    lets_do_this
   end
 
-  def self.letsDoThis
+  def self.lets_do_this
     prompt = TTY::Prompt.new
   	puts "\n"
     choices = ['Yeah!', 'Nah.']
     nav = prompt.select('Wanna see the smiley face?' + "\n", choices)
 
     if nav == 'Yeah!'
-      EmojiGrabber.main
-
-      BananaMan.dance
+      EmojiScraper.main
 
       puts 'bye bye, now'
       sleep (0.09)
