@@ -13,7 +13,14 @@ class EmojiScraper
 
     print ' ...'
     sleep(0.5)
-    print `throwing it to the nokogiri/pry, give it all she's got cap'n.`
+    print `throwing it to the nokogiri/pry, give it all she's got cap'n!`
+    sleep(0.2)
+
+    let_us_pray
+  end
+
+  def let_us_pray
+
 
   end
 
