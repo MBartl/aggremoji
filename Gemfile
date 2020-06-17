@@ -6,6 +6,7 @@ ruby '2.6.3'
 
 # Manually added gems
 gem 'bootsnap'
+gem 'csv'
 gem 'faker'
 gem 'nokogiri'
 gem 'pry'

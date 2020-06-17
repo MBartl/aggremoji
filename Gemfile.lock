@@ -69,6 +69,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    csv (3.0.9)
     diff-lcs (1.3)
     equatable (0.6.1)
     erubi (1.9.0)
@@ -230,6 +231,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
+  csv
   faker
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

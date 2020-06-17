@@ -15,7 +15,7 @@ class Interface
     nav = prompt.select("Wanna see the smiley face? \n(It's actually just a smiley banana rn, \nlol sry.)" + "\n", choices)
 
     if nav == 'Yeah!'
-      EmojiScraper.main
+      EmojiScraper.main url: @base_url
 
       BananaMan.dance
       puts 'bye bye, now'
