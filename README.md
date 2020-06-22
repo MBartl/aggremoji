@@ -10,13 +10,18 @@
 
 * License
   - CC0 1.0 Universal Creative Commons License
-
+  
+* Right Away
+  - `bundle install`
+  
 * To Run
   - input `ruby bin/run.rb` from root level directory
-  - follow prompts and (hopefully) aggregate your chosen emoji
+  - follow prompts and (hopefully) aggregate some emoji (you'll just get to see it in the pry for now :/)
 
 * How to run the test suite
   - `rake spec` from root directory
-  - `rake spec #{test-name?}` to run targetted tests (? - please confirm)
+  - `rake spec #{test-name?}` to run targetted tests (? - please confirm) (<-- no app specific tests yet)
+  - (the 15 passing tests are on a generic, non-functionining 'Widget' object)
 
 * ... 🤠
+##### help me build this out!
