@@ -12,7 +12,7 @@ class Interface
     prompt = TTY::Prompt.new
   	puts "\n"
     choices = ["Emoji's 🦜", '💆🏼‍♀️ Banana pls', 'Byeee..🤷🏻‍♀️']
-    nav = prompt.select("Wat do?" + "\n", choices)
+    nav = prompt.select("Wat do?", choices)
 
     if nav.include? 'Emoji'
       EmojiScraper.main url: @base_url
@@ -23,5 +23,9 @@ class Interface
       sleep (0.09)
       exit
     end
+  end
+
+  def self.clear
+    CSV.open('lib/utility/data.csv', 'w') {|file| file.truncate(0)}
   end
 end
