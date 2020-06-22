@@ -16,7 +16,8 @@
   
 * To Run
   - input `ruby bin/run.rb` from root level directory
-  - follow prompts and (hopefully) aggregate some emoji (you'll just get to see it in the pry for now :/)
+  - follow prompts and (hopefully) aggregate some emoji
+  - check out the results in your local `lib/utility/data.csv` file
 
 * How to run the test suite
   - `rake spec` from root directory
