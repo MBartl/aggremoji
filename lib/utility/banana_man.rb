@@ -1,5 +1,7 @@
 class BananaMan
 
+  # Spamming a banana man function because it was my favorite part of code
+  # camp and it gives me extra lines so it looks good on the ol' Github ;)
   def self.frame_one
     puts "
 
@@ -374,5 +376,4 @@ class BananaMan
     BananaMan.animation
     BananaMan.after_animation
   end
-
 end

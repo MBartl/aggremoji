@@ -9,69 +9,88 @@ class EmojiScraper
     url[0].length > 0 ? base_url = url : base_url = $base_url
 
     # Default search list will be 19
-    # 19 === slackmoji.com "random" list page (a few thousand emojis!)
+    # 19 === slackmoji.com "random" list page (a few thousand emojis! [approx. 6800?]) ~~~
     page[:url].nil? ? page = '19' : nil
 
-    # binding.pry
-
     # TODO: Add more html variables
+    # # # # This could be a modular system, with the user
+    # # # # providing input, their own link, etc. ~~~
     html = open(base_url.to_s + "categories/" + "#{page.to_s}" + "-random-emojis")
     doc = Nokogiri::HTML(html)
+    list = doc.search("ul.emojis").children.search("a")
 
+    # get names (file name w/out extension)
+    name_list = list.map{|file_names| file_names.attributes["download"].value.split('.').first}
 
-    link_and_description = doc.search(".g")
+    # get file names
+    file_name_list = list.map{|file_names| file_names.attributes["download"].value}
 
-    console.log(link_and_description)
+    # get links
+    link_extensions_list = list.map{|links| links.attributes["href"].value}
 
-    # TODO: main scrape job --HERE--
-    # TODO: Determine Implementation Strategy:
-    # 1) use Emoji class/object?
-    # emoji = Emoji.create()
-    #
-    # emoji.name = link_and_description.first.search('h3').text
-    # emoji.content = link_and_description.first.search('.s').css('span').text
-    # new_tip.category = "Ruby"
-    # new_tip.user_created = true
+    puts "This will take a minute!"
+    emoji_list = []
 
+    i = 0
+    name_list.count.times do
+      i += 1
+      if i % 300 == 0
+        print '.'
+      end
 
-    # TODO: OR ~~~~~~~~~~
-    # 2) add attributes to 'doc' variable?
-    # doc.img = link_and_description.first.attr('href').text
-    # doc.name = junk_url.split('?q=')[1].split('&sa=')[0]
+      emoji = Emoji.new(
+        name: name_list[i],
+        file: file_name_list[i],
+        url: link_extensions_list[i]
+      )
 
-    # binding.pry
+      if emoji_list.find{|e| e.name == emoji.name}
+        num = 1
 
-    # write_to_csv emoji
-    # OR ~~~~~~~~~~
-    # write_to_csv doc
-  end
+        if emoji.name.include?('[')
+          num = emoji.name.split('[')[1].to_i
+          num += 1
+          binding.pry
+        end
 
-  # def self.scrape_name_and_pic
-  #
-  # end
+        num = num.to_s
+        emoji.name += '[' + num + ']'
+        emoji.file = emoji.name + '.' + emoji.file.split('.')[1]
+      end
 
-  def self.write_to_csv doc
-
-    # TODO: Use example scraping below to locate name and picture in method, above
-    # data_arr = []
-    # description = doc.css("p").text.split("\n").find{|e| e.length > 0}
-    # picture = doc.css("td a img").find{|picture| picture.attributes["alt"].value.include?("Douglas adams portrait cropped.jpg")}.attributes["src"].value
-    #
-    # data_arr.push([description, picture])
-
-    if data == nil
-      data = doc
+      emoji_list << emoji
     end
 
-    CSV.open('utility/data.csv', "w") do |csv|
-      csv << data
+    puts name_list, file_name_list, link_extensions_list, emoji_list
+    binding.pry
+
+    intermediary_prompt emoji_list
+  end
+
+  def self.intermediary_prompt emoji_list
+    # TODO: Setting this up here so we can prompt
+    # # # # users before generating a .csv file
+    # # # # users could choose where the want the file, how to modify,
+    # # # # could check on it etc. etc. more options - this option is useless
+    # # # # now, but intended for scaling ~~~
+    # # ^^^^(probably not good dev practice but
+    # # I'm hoping this will all be gone soon!)
+
+    # binding.pry
+    write_to_csv emoji_list
+  end
+
+  def self.write_to_csv doc
+    require 'csv'
+    CSV.open("myfile.csv", "w") do |csv|
+      doc.each do |emoji|
+        csv << emoji
+      end
     end
   end
 
   def self.main *url, page
     init url, page
-    # binding.pry
     system 'clear'
   end
-
 end

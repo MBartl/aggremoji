@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_193530) do
+ActiveRecord::Schema.define(version: 2020_06_22_020835) do
+
+  create_table "emojis", force: :cascade do |t|
+    t.string "name"
+    t.string "file"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "widgets", force: :cascade do |t|
     t.string "name"
