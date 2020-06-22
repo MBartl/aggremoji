@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 # Specs in this file have access to a helper object that includes
-# the WidgetsHelper. For example:
+# the widgetsHelper. For example:
 #
-# describe WidgetsHelper do
+# describe widgetsHelper do
 #   describe "string concat" do
 #     it "concats two strings with spaces" do
 #       expect(helper.concat_strings("this","that")).to eq("this that")

@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Widgets/show", type: :view do
+RSpec.describe "widgets/show", type: :view do
   before(:each) do
-    @Widget = assign(:Widget, Widget.create!(
+    @widget = assign(:widget, Widget.create!(
       name: "Name"
     ))
   end

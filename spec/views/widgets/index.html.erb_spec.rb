@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Widgets/index", type: :view do
+RSpec.describe "widgets/index", type: :view do
   before(:each) do
-    assign(:Widgets, [
+    assign(:widgets, [
       Widget.create!(
         name: "Name"
       ),
@@ -12,7 +12,7 @@ RSpec.describe "Widgets/index", type: :view do
     ])
   end
 
-  it "renders a list of Widgets" do
+  it "renders a list of widgets" do
     render
     assert_select "tr>td", text: "Name".to_s, count: 2
   end

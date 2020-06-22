@@ -12,8 +12,8 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/Widgets", type: :request do
-  # Widget. As you add validations to Widget, be sure to
+RSpec.describe "/widgets", type: :request do
+  # widget. As you add validations to widget, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -31,58 +31,58 @@ RSpec.describe "/Widgets", type: :request do
 
   # describe "GET /index" do
   #   it "renders a successful response" do
-  #     Widget.create! valid_attributes
-  #     get Widgets_url
+  #     widget.create! valid_attributes
+  #     get widgets_url
   #     expect(response).to be_successful
   #   end
   # end
   #
   # describe "GET /show" do
   #   it "renders a successful response" do
-  #     Widget = Widget.create! valid_attributes
-  #     get Widget_url(Widget)
+  #     widget = widget.create! valid_attributes
+  #     get widget_url(widget)
   #     expect(response).to be_successful
   #   end
   # end
 
   describe "GET /new" do
     it "renders a successful response" do
-      get new_Widget_url
+      get new_widget_url
       expect(response).to be_successful
     end
   end
 
   # describe "GET /edit" do
   #   it "render a successful response" do
-  #     Widget = Widget.create! valid_attributes
-  #     get edit_Widget_url(Widget)
+  #     widget = widget.create! valid_attributes
+  #     get edit_widget_url(widget)
   #     expect(response).to be_successful
   #   end
   # end
   #
   # describe "POST /create" do
   #   context "with valid parameters" do
-  #     it "creates a new Widget" do
+  #     it "creates a new widget" do
   #       expect {
-  #         post Widgets_url, params: { Widget: valid_attributes }
-  #       }.to change(Widget, :count).by(1)
+  #         post widgets_url, params: { widget: valid_attributes }
+  #       }.to change(widget, :count).by(1)
   #     end
   #
-  #     it "redirects to the created Widget" do
-  #       post Widgets_url, params: { Widget: valid_attributes }
-  #       expect(response).to redirect_to(Widget_url(Widget.last))
+  #     it "redirects to the created widget" do
+  #       post widgets_url, params: { widget: valid_attributes }
+  #       expect(response).to redirect_to(widget_url(widget.last))
   #     end
   #   end
   #
   #   context "with invalid parameters" do
-  #     it "does not create a new Widget" do
+  #     it "does not create a new widget" do
   #       expect {
-  #         post Widgets_url, params: { Widget: invalid_attributes }
-  #       }.to change(Widget, :count).by(0)
+  #         post widgets_url, params: { widget: invalid_attributes }
+  #       }.to change(widget, :count).by(0)
   #     end
   #
   #     it "renders a successful response (i.e. to display the 'new' template)" do
-  #       post Widgets_url, params: { Widget: invalid_attributes }
+  #       post widgets_url, params: { widget: invalid_attributes }
   #       expect(response).to be_successful
   #     end
   #   end
@@ -94,42 +94,42 @@ RSpec.describe "/Widgets", type: :request do
   #       skip("Add a hash of attributes valid for your model")
   #     }
   #
-  #     it "updates the requested Widget" do
-  #       Widget = Widget.create! valid_attributes
-  #       patch Widget_url(Widget), params: { Widget: new_attributes }
-  #       Widget.reload
+  #     it "updates the requested widget" do
+  #       widget = widget.create! valid_attributes
+  #       patch widget_url(widget), params: { widget: new_attributes }
+  #       widget.reload
   #       skip("Add assertions for updated state")
   #     end
   #
-  #     it "redirects to the Widget" do
-  #       Widget = Widget.create! valid_attributes
-  #       patch Widget_url(Widget), params: { Widget: new_attributes }
-  #       Widget.reload
-  #       expect(response).to redirect_to(Widget_url(Widget))
+  #     it "redirects to the widget" do
+  #       widget = widget.create! valid_attributes
+  #       patch widget_url(widget), params: { widget: new_attributes }
+  #       widget.reload
+  #       expect(response).to redirect_to(widget_url(widget))
   #     end
   #   end
   #
   #   context "with invalid parameters" do
   #     it "renders a successful response (i.e. to display the 'edit' template)" do
-  #       Widget = Widget.create! valid_attributes
-  #       patch Widget_url(Widget), params: { Widget: invalid_attributes }
+  #       widget = widget.create! valid_attributes
+  #       patch widget_url(widget), params: { widget: invalid_attributes }
   #       expect(response).to be_successful
   #     end
   #   end
   # end
   #
   # describe "DELETE /destroy" do
-  #   it "destroys the requested Widget" do
-  #     Widget = Widget.create! valid_attributes
+  #   it "destroys the requested widget" do
+  #     widget = widget.create! valid_attributes
   #     expect {
-  #       delete Widget_url(Widget)
-  #     }.to change(Widget, :count).by(-1)
+  #       delete widget_url(widget)
+  #     }.to change(widget, :count).by(-1)
   #   end
   #
-  #   it "redirects to the Widgets list" do
-  #     Widget = Widget.create! valid_attributes
-  #     delete Widget_url(Widget)
-  #     expect(response).to redirect_to(Widgets_url)
+  #   it "redirects to the widgets list" do
+  #     widget = widget.create! valid_attributes
+  #     delete widget_url(widget)
+  #     expect(response).to redirect_to(widgets_url)
   #   end
   # end
 end

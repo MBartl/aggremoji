@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "Widgets/edit", type: :view do
+RSpec.describe "widgets/edit", type: :view do
   before(:each) do
-    @Widget = assign(:Widget, Widget.create!(
+    @widget = assign(:widget, Widget.create!(
       name: "MyString"
     ))
   end
 
-  it "renders the edit Widget form" do
+  it "renders the edit widget form" do
     render
 
-    assert_select "form[action=?][method=?]", Widget_path(@Widget), "post" do
+    assert_select "form[action=?][method=?]", widget_path(@widget), "post" do
 
-      assert_select "input[name=?]", "Widget[name]"
+      assert_select "input[name=?]", "widget[name]"
     end
   end
 end
