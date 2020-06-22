@@ -33,7 +33,7 @@ class EmojiScraper
     i = 0
     name_list.count.times do
       i += 1
-      if i % 279 == 0
+      if i % 278 == 0
         print '.'
       end
 
@@ -43,6 +43,7 @@ class EmojiScraper
         url: link_extensions_list[i]
       )
 
+      # append duplicate names with a "[x]" to avoid duplicated file names
       if emoji_list.find{|e| e.name == emoji.name}
         num = 1
 
@@ -91,9 +92,11 @@ class EmojiScraper
       :headers => [
         # < column headers | 26+32 chars >
         # # # add >> '| ' << to the end
-        'names                      | ' +
-        'files                            | ' +
-        'urls/link fragments'
+        'names',
+        '                     ' +
+            '| files',
+        '                           ' +
+            '| urls/link fragments'
       ]
     ) do |csv|
       doc.each do |emoji|
