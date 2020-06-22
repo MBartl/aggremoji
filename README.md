@@ -26,6 +26,9 @@
 * Current build only scrapes this url:
   -  https://slackmojis.com/categories/19-random-emojis
    and returns different versions of lists featuring the **8668** results (currently only within your `binding.pry`)
+   
+* To clear your local .csv file
+  - `ruby bin/clear.rb`
 
 * ... 🤠
 ##### help me build this out!
