@@ -16,6 +16,7 @@
   
 * To Run
   - input `ruby bin/run.rb` from root level directory
+      (or `bundle exec ruby bin/run.rb` ...)
   - follow prompts and (hopefully) aggregate some emoji
   - check out the results in your local `lib/utility/data.csv` file
 
