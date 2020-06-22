@@ -3,36 +3,36 @@ require "rails_helper"
 RSpec.describe WidgetsController, type: :routing do
   describe "routing" do
     it "routes to #index" do
-      expect(get: "/widgets").to route_to("widgets#index")
+      expect(get: "/Widgets").to route_to("Widgets#index")
     end
 
     it "routes to #new" do
-      expect(get: "/widgets/new").to route_to("widgets#new")
+      expect(get: "/Widgets/new").to route_to("Widgets#new")
     end
 
     it "routes to #show" do
-      expect(get: "/widgets/1").to route_to("widgets#show", id: "1")
+      expect(get: "/Widgets/1").to route_to("Widgets#show", id: "1")
     end
 
     it "routes to #edit" do
-      expect(get: "/widgets/1/edit").to route_to("widgets#edit", id: "1")
+      expect(get: "/Widgets/1/edit").to route_to("Widgets#edit", id: "1")
     end
 
 
     it "routes to #create" do
-      expect(post: "/widgets").to route_to("widgets#create")
+      expect(post: "/Widgets").to route_to("Widgets#create")
     end
 
     it "routes to #update via PUT" do
-      expect(put: "/widgets/1").to route_to("widgets#update", id: "1")
+      expect(put: "/Widgets/1").to route_to("Widgets#update", id: "1")
     end
 
     it "routes to #update via PATCH" do
-      expect(patch: "/widgets/1").to route_to("widgets#update", id: "1")
+      expect(patch: "/Widgets/1").to route_to("Widgets#update", id: "1")
     end
 
     it "routes to #destroy" do
-      expect(delete: "/widgets/1").to route_to("widgets#destroy", id: "1")
+      expect(delete: "/Widgets/1").to route_to("Widgets#destroy", id: "1")
     end
   end
 end

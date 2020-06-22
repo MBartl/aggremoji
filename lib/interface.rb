@@ -11,21 +11,17 @@ class Interface
   def self.lets_do_this
     prompt = TTY::Prompt.new
   	puts "\n"
-    choices = ['Yeah!', 'Nah.']
-    nav = prompt.select("Wanna see the smiley face? \n(It's actually just a smiley banana rn, \nlol sry.)" + "\n", choices)
+    choices = ["Emoji's 🦜", '💆🏼‍♀️ Banana pls', 'Byeee..🤷🏻‍♀️']
+    nav = prompt.select("Wat do?)" + "\n", choices)
 
-    if nav == 'Yeah!'
+    if nav.include? 'Emoji'
       EmojiScraper.main url: @base_url
-
+    elsif nav.include? 'Banana'
       BananaMan.dance
-      puts 'bye bye, now'
-      sleep (0.09)
-      exit
     else
       puts 'k bye, lol 🤣'
       sleep (0.09)
       exit
     end
   end
-
 end
