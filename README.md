@@ -27,7 +27,7 @@
   
 * Current build only scrapes this url:
   -  https://slackmojis.com/categories/19-random-emojis
-   and returns different versions of lists featuring the **8668** results (currently only within your `binding.pry`)
+   and returns ~~different versions of lists featuring the **8668** results (currently only within your `binding.pry`)~~ the data into a .csv called 'data' located here: `lib/utility/data.csv` --> the pry's are still in code, comment them back in to see the lists mentioned <
    
 * To clear your local .csv file
   - `ruby bin/clear.rb`
